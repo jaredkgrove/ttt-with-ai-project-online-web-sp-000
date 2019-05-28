@@ -26,7 +26,7 @@ describe 'Players::Computer' do
 
       computer_move = computer.move(board)
 
-      expect(computer_move).to eq(3)
+      expect(computer_move).to eq("3")
     end
   end
 end
