@@ -59,8 +59,7 @@ class Game
     game.play
     puts "Would you like to play again? Y/N"
     if gets.strip == "Y"
-      game = Game.start 
-      game.play
+      Game.start 
     end
   end
   
