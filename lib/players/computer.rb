@@ -7,15 +7,15 @@ module Players
       middle_index = 4
       corner_indices = [0,2,6,8]
       if win_index
-        win_index + 1
+        (win_index + 1).to_s
       elsif win_prevention_index
-        win_prevention_index + 1
+        (win_prevention_index + 1).to_s
       elsif board.cells[middle_index] == " "
-        middle_index + 1 
+        (middle_index + 1).to_s 
       elsif corner_indices.any? {|index| board.cells[index] == " "}
-        corner_indices.detect {|index| board.cells[index] == " "} + 1
+        (corner_indices.detect {|index| board.cells[index] == " "} + 1).to_s
       else
-        board.cells.each_index.detect {|index| board.cells[index] == " "} + 1
+        (board.cells.each_index.detect {|index| board.cells[index] == " "} + 1).to_s
       end
     end
     
