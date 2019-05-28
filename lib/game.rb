@@ -55,8 +55,8 @@ class Game
     game_type = self.choose_game_type
     starting_token = self.choose_starting_token
     players = self.create_players(game_type, starting_token)
-    self.new(players[0], players[1])
-    
+    game = self.new(players[0], players[1])
+    game.play
       puts "Would you like to play again? Y/N"
     if gets.strip == "Y"
       game = Game.start 
